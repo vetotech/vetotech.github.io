@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="manifest" href="manifest.json">
   <meta charset="UTF-8">
   <meta http-equiv="refresh" content="0; url=https://payhip.com/vetotech" />
   <title>Redirecting...</title>
@@ -8,5 +9,11 @@
 <body style="background:#0b0b0b; color:#00ff7f; font-family:Arial, sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; flex-direction:column;">
   <h1>Redirecting to VetoTech Store...</h1>
   <p>If you are not redirected, <a href="https://payhip.com/vetotech" style="color:#00ff7f;">click here</a>.</p>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/service-worker.js")
+      .then(() => console.log("Service Worker Registered"));
+  }
+</script>
 </body>
 </html>
